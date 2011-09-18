@@ -102,4 +102,4 @@
 	url = git://github.com/vim-scripts/ManPageView.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
-	url = git://github.com/nviennot/molokai.git
+	url = git@github.com:chazy/molokai.git
