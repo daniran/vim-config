@@ -144,32 +144,6 @@ map <silent> <C-i> :YRShow<CR>
 set undolevels=10000
 let xml_use_xhtml = 1
 
-" FuzzyFinder
-"let g:fuf_modesDisable = []
-"let g:fuf_abbrevMap = { }
-"let g:fuf_mrufile_maxItem = 300
-"let g:fuf_mrucmd_maxItem = 400
-"nnoremap <silent> <C-d><C-p> :FufFileWithFullCwd<CR>
-"nnoremap <silent> <C-d><C-f> :FufFile<CR>
-"nnoremap <silent> <C-d><C-d> :FufDirWithCurrentBufferDir<CR>
-"nnoremap <silent> <C-d>d     :FufDirWithFullCwd<CR>
-"nnoremap <silent> <C-d>D     :FufDir<CR>
-"nnoremap <silent> <C-d><C-j> :FufMruFile<CR>
-"nnoremap <silent> <C-d><C-k> :FufMruCmd<CR>
-"nnoremap <silent> <C-d><C-b> :FufBookmark<CR>
-"nnoremap <silent> <C-d><C-t> :FufTag<CR>
-"nnoremap <silent> <C-d>t     :FufTag!<CR>
-"noremap  <silent> g]         :FufTagWithCursorWord!<CR>
-"nnoremap <silent> <C-d>f     :FufTaggedFile<CR>
-"nnoremap <silent> <C-d><C-j> :FufJumpList<CR>
-"nnoremap <silent> <C-d><C-g> :FufChangeList<CR>
-"nnoremap <silent> <C-d><C-q> :FufQuickfix<CR>
-"nnoremap <silent> <C-d><C-l> :FufLine<CR>
-"nnoremap <silent> <C-d><C-h> :FufHelp<CR>
-"nnoremap <silent> <C-d><C-b> :FufAddBookmark<CR>
-"vnoremap <silent> <C-d><C-b> :FufAddBookmarkAsSelectedText<CR>
-"nnoremap <silent> <C-d><C-r> :FufRenewCache<CR>
-
 set directory=~/.vim/swap
 
 map <F1> :set lines=75<CR>:set columns=135<CR>
