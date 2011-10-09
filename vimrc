@@ -118,6 +118,11 @@ exe "bd!".todelbufNr
 endfunction
 """"""""""""""""""""""""""""""""""""""""
 
+let Grep_Skip_Dirs = '.git'
+let Grep_Skip_files = '*~ cscope* .svn'
+let Grep_Default_Options = '-i -I'
+nnoremap <silent> <F6> :Rgrep <CR><CR><CR><CR>
+
 let mapleader=","
 let localmapleader=","
 map <Leader>ss :setlocal spell!<cr>
