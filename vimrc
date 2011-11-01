@@ -89,6 +89,8 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
+map <C-n> :cnext<cr>
+map <C-p> :cprev<cr>
 
 set wildmenu
 "set autochdir
@@ -154,5 +156,3 @@ let g:syntastic_disabled_filetypes=['c']
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
-nnoremap <C-l> :cnext<cr>
-nnoremap <C-h> :cprev<cr>
