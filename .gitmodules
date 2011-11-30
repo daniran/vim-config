@@ -103,3 +103,6 @@
 [submodule "bundle/dirsettings"]
 	path = bundle/dirsettings
 	url = git@github.com:chazy/dirsettings.git
+[submodule "bundle/quickfixsigns"]
+	path = bundle/quickfixsigns
+	url = git@github.com:chazy/quickfixsigns_vim.git
