@@ -139,7 +139,6 @@ set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
-map <silent> <C-m> :YRShow<CR>
 
 set undolevels=10000
 let xml_use_xhtml = 1
