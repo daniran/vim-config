@@ -131,9 +131,6 @@ map <Leader>ss :setlocal spell!<cr>
 map <Leader>/ :nohlsearch<cr>
 map <Leader>l :MiniBufExplorer<cr>
 
-map <M-[> :tprev<CR>
-map <M-]> :tnext<CR>
-
 set list!
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
@@ -155,3 +152,18 @@ let g:syntastic_disabled_filetypes=['c']
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
+""""""""""""""""""""""""""""""""""""""
+" Get rid of some very annoying warnings opening stdin
+
+compiler gcc
+set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_readv\ not\ implemented\ [-Wcpp]
+set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_writev\ not\ implemented\ [-Wcpp]
+
+
+""""""""""""""""""""""""""""""""""""""
+" Turns out I use tabs more than completeion, let's try with ctrl+space
+if !has('gui_running')
+	let g:SuperTabMappingTabLiteral = '<s-tab>'
+	let g:SuperTabMappingForward = '<nul>'
+	let g:SuperTabMappingBackward = '<s-nul>'
+endif
