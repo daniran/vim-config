@@ -89,8 +89,6 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
-map <C-n> :cnext<cr>
-map <C-p> :cprev<cr>
 
 set wildmenu
 "set autochdir
@@ -136,7 +134,7 @@ set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
-map <silent> <C-m> :YRShow<CR>
+"map <silent> <C-m> :YRShow<CR>
 
 set undolevels=10000
 let xml_use_xhtml = 1
@@ -168,3 +166,6 @@ if !has('gui_running')
 	let g:SuperTabMappingForward = '<nul>'
 	let g:SuperTabMappingBackward = '<s-nul>'
 endif
+
+nnoremap <C-n> :cnext<cr>
+nnoremap <C-p> :cprev<cr>
