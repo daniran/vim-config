@@ -89,9 +89,8 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
-map <M-c> "*y
-map <M-p> "*p
-set clipboard+=unnamed
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 set wildmenu
 "set autochdir
