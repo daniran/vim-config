@@ -106,3 +106,6 @@
 [submodule "bundle/dirsettings"]
 	path = bundle/dirsettings
 	url = git@github.com:chazy/dirsettings.git
+[submodule "bundle/armasm"]
+	path = bundle/armasm
+	url = git@github.com:chazy/vim-armasm.git
