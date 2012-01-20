@@ -89,6 +89,9 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
+map <M-c> "*y
+map <M-p> "*p
+set clipboard+=unnamed
 
 set wildmenu
 "set autochdir
