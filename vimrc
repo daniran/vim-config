@@ -89,8 +89,6 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
-map <C-n> :cnext<cr>
-map <C-p> :cprev<cr>
 
 set wildmenu
 "set autochdir
@@ -131,15 +129,11 @@ map <Leader>ss :setlocal spell!<cr>
 map <Leader>/ :nohlsearch<cr>
 map <Leader>l :MiniBufExplorer<cr>
 
-map <M-[> :tprev<CR>
-map <M-]> :tnext<CR>
-
 set list!
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 
 vnoremap . :normal .<CR>
 vnoremap @ :normal! @
-map <silent> <C-m> :YRShow<CR>
 
 set undolevels=10000
 let xml_use_xhtml = 1
@@ -156,3 +150,21 @@ let g:syntastic_disabled_filetypes=['c']
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
+""""""""""""""""""""""""""""""""""""""
+" Get rid of some very annoying warnings opening stdin
+
+compiler gcc
+set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_readv\ not\ implemented\ [-Wcpp]
+set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_writev\ not\ implemented\ [-Wcpp]
+
+
+""""""""""""""""""""""""""""""""""""""
+" Turns out I use tabs more than completeion, let's try with ctrl+space
+if !has('gui_running')
+	let g:SuperTabMappingTabLiteral = '<s-tab>'
+	let g:SuperTabMappingForward = '<nul>'
+	let g:SuperTabMappingBackward = '<s-nul>'
+endif
+
+nnoremap <C-n> :cnext<cr>
+nnoremap <C-p> :cprev<cr>

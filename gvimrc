@@ -4,4 +4,8 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 set columns=160
-set lines=45
+set lines=100
+set vb
+
+
+command Mak ! ssh ubuntu 'source ~/.settings/bashrc; kvmarm_env; cd ~/src/kvmarm/linux-kvm-arm; make -j 4'
