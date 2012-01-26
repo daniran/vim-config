@@ -85,15 +85,9 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/manpageview"]
-	path = bundle/manpageview
-	url = git://github.com/vim-scripts/ManPageView.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = git@github.com:chazy/molokai.git
