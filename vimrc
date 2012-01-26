@@ -90,7 +90,7 @@ map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
 vmap <C-y> y:call system("pbcopy", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+nmap <C-x> :call setreg("\"",system("pbpaste"))<CR>p
 
 set wildmenu
 "set autochdir
