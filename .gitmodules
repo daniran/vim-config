@@ -54,7 +54,7 @@
 	url = git://github.com/godlygeek/tabular
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = git://github.com/nviennot/snipmate.vim.git
+	url = git://github.com/chazy/snipmate.vim.git
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
@@ -85,15 +85,9 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/manpageview"]
-	path = bundle/manpageview
-	url = git://github.com/vim-scripts/ManPageView.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = git@github.com:chazy/molokai.git
