@@ -89,8 +89,8 @@ map <M-j> :bn<cr>
 map <M-k> :bp<cr>
 map <C-PageDown> :cnext<cr>
 map <C-PageUp> :cprev<cr>
-vmap <C-y> y:call system("pbcopy", getreg("\""))<CR>
-nmap <C-x> :call setreg("\"",system("pbpaste"))<CR>p
+vnoremap <C-y> y:call system("pbcopy", getreg("\""))<CR>
+nnoremap <C-x> :call setreg("\"",system("pbpaste"))<CR>p
 
 set wildmenu
 "set autochdir
@@ -148,7 +148,10 @@ map <F2> :set lines=75<CR>:set columns=210<CR>
 nnoremap <F5> :GundoToggle<CR>
 
 let g:syntastic_enable_signs=1
-let g:syntastic_disabled_filetypes=['c']
+let g:syntastic_mode_map = { 'mode': 'active',
+			   \ 'active_filetypes': [],
+			   \ 'passive_filetypes': ['c'] }
+
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
