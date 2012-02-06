@@ -154,6 +154,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
+let g:tex_flavor='latex'
 
 """"""""""""""""""""""""""""""""""""""
 " Get rid of some very annoying warnings opening stdin
