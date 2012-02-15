@@ -154,7 +154,15 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
-let g:tex_flavor='latex'
+
+""""""""""""""""""""""""""""""""""""""
+" Some Vim-LaTeX settings
+if has('gui_running')
+	let g:tex_flavor='latex'
+	let g:Tex_DefaultTargetFormat = 'pdf'
+	"TexLet g:Tex_TreatMacViewerAsUNIX = 1
+	let Tex_ViewRuleComplete_pdf = '/usr/bin/open -a Preview $*.pdf' 
+endif
 
 """"""""""""""""""""""""""""""""""""""
 " Get rid of some very annoying warnings opening stdin
