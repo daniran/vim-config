@@ -163,6 +163,10 @@ if has('gui_running')
 endif
 
 """"""""""""""""""""""""""""""""""""""
+" When I write assembly, I write ARM assembly
+au BufNewFile,BufRead *.S set filetype=armasm
+
+""""""""""""""""""""""""""""""""""""""
 " Get rid of some very annoying warnings opening stdin
 
 compiler gcc
