@@ -87,10 +87,6 @@ let g:miniBufExplVSplit = 20
 
 map <M-j> :bn<cr>
 map <M-k> :bp<cr>
-map <C-PageDown> :cnext<cr>
-map <C-PageUp> :cprev<cr>
-vnoremap <C-y> y:call system("pbcopy", getreg("\""))<CR>
-nnoremap <C-x> :call setreg("\"",system("pbpaste"))<CR>p
 
 set wildmenu
 "set autochdir
@@ -130,6 +126,8 @@ let localmapleader=","
 map <Leader>ss :setlocal spell!<cr>
 map <Leader>/ :nohlsearch<cr>
 map <Leader>l :MiniBufExplorer<cr>
+vnoremap <Leader>y y:call system("pbcopy", getreg("\""))<cr>
+nnoremap <Leader>p :call setreg("\"",system("pbpaste"))<cr>p
 
 set list!
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
@@ -172,13 +170,21 @@ set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_readv
 set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_writev\ not\ implemented\ [-Wcpp]
 
 
-""""""""""""""""""""""""""""""""""""""
-" Turns out I use tabs more than completeion, let's try with ctrl+space
-if !has('gui_running')
-	let g:SuperTabMappingTabLiteral = '<s-tab>'
-	let g:SuperTabMappingForward = '<nul>'
-	let g:SuperTabMappingBackward = '<s-nul>'
+"""""""""""""""""""""""""""""""""""""
+" Remap autocomplete to ctrl+space
+if has("gui_running")
+    " C-Space seems to work under gVim on both Linux and win32
+    inoremap <C-Space> <C-n>
+else " no gui
+  if has("unix")
+    inoremap <Nul> <C-n>
+  else
+  " I have no idea of the name of Ctrl-Space elsewhere
+  endif
 endif
 
-nnoremap <C-n> :cnext<cr>
-nnoremap <C-p> :cprev<cr>
+
+""""""""""""""""""""""""""""""""""""""
+" Remap C-n and C-p to to navigate the quickfix next-previous in normal mode
+nmap <C-p> :cprev<cr>
+nmap <C-n> :cnext<cr>
