@@ -167,6 +167,10 @@ endif
 au BufNewFile,BufRead *.S set filetype=armasm
 
 """"""""""""""""""""""""""""""""""""""
+" Pipe cr kernel buffer into appropriately named file: voila colors
+au BufNewFile,BufRead *.crdmesg set filetype=crdmesg
+
+""""""""""""""""""""""""""""""""""""""
 " Get rid of some very annoying warnings opening stdin
 
 compiler gcc
