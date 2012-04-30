@@ -153,6 +153,11 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
+" Let mac-vim receive meta-key input
+if has("gui_running")
+	set invmmta
+endif
+
 """"""""""""""""""""""""""""""""""""""
 " Some Vim-LaTeX settings
 if has('gui_running')
@@ -161,6 +166,13 @@ if has('gui_running')
 	"TexLet g:Tex_TreatMacViewerAsUNIX = 1
 	let Tex_ViewRuleComplete_pdf = '/usr/bin/open -a Preview $*.pdf' 
 endif
+imap <C-k> <Plug>IMAP_JumpForward
+
+" Disable folding
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments=""
+let Tex_FoldedMisc=""
+
 
 """"""""""""""""""""""""""""""""""""""
 " When I write assembly, I write ARM assembly
