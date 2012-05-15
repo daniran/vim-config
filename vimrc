@@ -126,8 +126,18 @@ let localmapleader=","
 map <Leader>ss :setlocal spell!<cr>
 map <Leader>/ :nohlsearch<cr>
 map <Leader>l :MiniBufExplorer<cr>
-vnoremap <Leader>y y:call system("pbcopy", getreg("\""))<cr>
-nnoremap <Leader>p :call setreg("\"",system("pbpaste"))<cr>p
+
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    vnoremap <Leader>y y:call system("pbcopy", getreg("\""))<cr>
+    nnoremap <Leader>p :call setreg("\"",system("pbpaste"))<cr>p
+  else
+    vnoremap <Leader>y "*y
+    nnoremap <Leader>p "*p
+  endif
+endif
+
 
 set list!
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
@@ -154,8 +164,11 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 
 " Let mac-vim receive meta-key input
-if has("gui_running")
+if has("gui_running") && has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
 	set invmmta
+  endif
 endif
 
 """"""""""""""""""""""""""""""""""""""

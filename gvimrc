@@ -6,3 +6,4 @@ set guioptions-=L  "remove left-hand scroll bar
 set columns=88
 set lines=90
 set vb
+set t_vb=
