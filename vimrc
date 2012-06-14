@@ -191,6 +191,13 @@ let Tex_FoldedMisc=""
 " When I write assembly, I write ARM assembly
 au BufNewFile,BufRead *.S set filetype=armasm
 
+
+""""""""""""""""""""""""""""""""""""""
+" ActionScript
+au BufNewFile,BufRead *.as set filetype=actionscript
+au BufNewFile,BufRead *.mxml set filetype=mxml
+
+
 """"""""""""""""""""""""""""""""""""""
 " Pipe cr kernel buffer into appropriately named file: voila colors
 au BufNewFile,BufRead *.crdmesg set filetype=crdmesg
