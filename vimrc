@@ -126,6 +126,7 @@ let localmapleader=","
 map <Leader>ss :setlocal spell!<cr>
 map <Leader>/ :nohlsearch<cr>
 map <Leader>l :MiniBufExplorer<cr>
+map <Leader>c :call setqflist([])<cr>
 
 if has("unix")
   let s:uname = system("uname")
@@ -209,6 +210,7 @@ compiler gcc
 set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_readv\ not\ implemented\ [-Wcpp]
 set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ syscall\ process_vm_writev\ not\ implemented\ [-Wcpp]
 set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ \"TODO:\ return_address\ should\ user\ unwind\ tables\"
+set errorformat^=%-G<stdin>:%l:2:\ warning:\ #warning\ \"TODO:\ return_address\ should\ user\ unwind\ tables\"\ [-Wcpp]
 
 
 """""""""""""""""""""""""""""""""""""
